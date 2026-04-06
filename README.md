@@ -4,7 +4,7 @@ Este proyecto consiste en la implementación de un servidor de radio por streami
 
 ---
 
-## Miembros del proyecto
+## Autor
 
 - [David Gutiérrez Navío](https://github.com/tu-usuario)
 
@@ -35,3 +35,5 @@ Este proyecto consiste en la implementación de un servidor de radio por streami
    Crea las carpetas necesarias para organizar la configuración, los audios y los registros:
    ```bash
    mkdir -p ~/radio-dgutierrez/{config,audio,logs}
+
+2. **Configurar las credenciales de acceso:**
