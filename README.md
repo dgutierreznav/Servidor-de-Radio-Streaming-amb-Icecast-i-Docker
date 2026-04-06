@@ -110,3 +110,8 @@ radio-dgutierrez/
      ```bash
      http://localhost:8000/radio-nombre_radio.mp3
 
+## Notas y recomendaciones
+
+   - El ancho de banda de subida necesario se calcula multiplicando el bitrate del stream por el número de oyentes simultáneos
+   - Los fallos de conexión suelen deberse a errores en las contraseñas, puertos incorrectos o puntos de montaje duplicados
+   - La revisión de los archivos de registro es esencial para identificar errores de acceso y problemas de configuración en el servidor
