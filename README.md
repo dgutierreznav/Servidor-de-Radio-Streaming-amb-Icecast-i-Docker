@@ -23,8 +23,8 @@ Este proyecto consiste en la implementación de un servidor de radio por streami
 
 ## Requisitos previos
 
-- **Docker** y **Docker Compose** instalados en el sistema.
-- Archivos de audio en formato **MP3** o **Opus** dentro del directorio correspondiente.
+- **Docker** y **Docker Compose** instalados en el sistema
+- Archivos de audio en formato **MP3** o **Opus** dentro del directorio correspondiente
 - Estructura de directorios creada (`audio`, `config`, `logs`).
 
 ---
@@ -53,7 +53,7 @@ Este proyecto consiste en la implementación de un servidor de radio por streami
 
 ---
 
-## Puntos de Montaje y Calidades
+## Puntos de montaje y calidades
    - El servidor está configurado para ofrecer diferentes flujos según el ancho de banda y la calidad deseada:
      
 | Punto de Montaje | Formato | Bitrate | Calidad |
@@ -68,4 +68,13 @@ Este proyecto consiste en la implementación de un servidor de radio por streami
 
 **Gestión de contenido y metadatos**
    - **Playlist Rotativa**:
-     - Se utiliza un archivo `bucle.txt` y la función `concat` de FFmpeg para emitir una lista de canciones en bucle infinito.
+      - Se utiliza un archivo `bucle.txt` y la función `concat` de FFmpeg para emitir una lista de canciones en bucle infinito
+        
+   - **Metadatos Dinámicos**:
+     - Los streamers están configurados con el parámetro `-map-metadata 0` para enviar información de artista y título automáticamente al servidor
+
+**Programación horaria (Automatización)**
+   - Se utiliza un script de control (`radio_control.sh`) sincronizado con el sistema Crontab para gestionar las emisiones según la hora:
+      - **08:00:** Inicia el stream principal de la mañana
+      - **14:00:** Cambio a un flujo de diferente calidad (HQ u Opus) por la tarde
+      - **22:00:** Cierre de emisión y parada de servicios para la noche
