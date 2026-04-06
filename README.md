@@ -32,12 +32,13 @@ Este proyecto consiste en la implementación de un servidor de radio por streami
 ## Instrucciones para poner en marcha el proyecto
 
 1. **Preparar la estructura de directorios:**
-   Crea las carpetas necesarias para organizar la configuración, los audios y los registros:
+
+   - Crea las carpetas necesarias para organizar la configuración, los audios y los registros:
    ```bash
    
    mkdir -p ~/radio-dgutierrez/{config,audio,logs}
 
-2. **Configurar las credenciales de acceso:**
+3. **Configurar las credenciales de acceso:**
    
    - Contraseña de Fuente (Source): ********
    - Contraseña de Administración: ********
