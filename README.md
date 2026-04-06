@@ -28,6 +28,17 @@ Este proyecto consiste en la implementación de un servidor de radio por streami
 - Estructura de directorios creada (`audio`, `config`, `logs`).
 
 ---
+radio-dgutierrez/
+├── /audio
+├── /config
+├── /logs
+├── docker-compose.yml
+└── radio_control.sh
+```
+
+```
+
+---
 
 ## Instrucciones para poner en marcha el proyecto
 
@@ -58,9 +69,9 @@ Este proyecto consiste en la implementación de un servidor de radio por streami
      
 | Punto de Montaje | Formato | Bitrate | Calidad |
 | :--- | :--- | :--- | :--- |
-| `/radio-dgutierrez.mp3` | MP3 | 128 kbps | Estándar |
-| `/radio-dgutierrez-hq.mp3` | MP3 | 320 kbps | Muy Alta |
-| `/radio-dgutierrez.opus` | Opus | 96 kbps | Excelente |
+| `/radio-nombre_radio.mp3` | MP3 | 128 kbps | Estándar |
+| `/radio-nombre_radio-hq.mp3` | MP3 | 320 kbps | Muy Alta |
+| `/radio-nombre_radio.opus` | Opus | 96 kbps | Excelente |
 
 ---
 
@@ -78,3 +89,24 @@ Este proyecto consiste en la implementación de un servidor de radio por streami
       - **08:00** → Inicia el stream principal de la mañana
       - **14:00** → Cambio a un flujo de diferente calidad
       - **22:00** → Cierre de emisión y parada de servicios
+
+---
+
+## Acceso al proyecto
+
+**Una vez los contenedores estén en marcha, puedes acceder a las siguientes URLs**:
+   - **Panel de Administración**:
+
+     ```bash
+     http://localhost:8000/admin/
+
+   - **Estado Público del Servidor**:
+
+     ```bash
+     http://localhost:8000/status.xsl
+
+   - **Escuchar el Stream (MP3)**:
+
+     ```bash
+     http://localhost:8000/radio-nombre_radio.mp3
+
