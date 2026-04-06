@@ -53,6 +53,9 @@ Este proyecto consiste en la implementación de un servidor de radio por streami
 
 ---
 
+## Puntos de Montaje y Calidades
+   - El servidor está configurado para ofrecer diferentes flujos según el ancho de banda y la calidad deseada:
+     
 | Punto de Montaje | Formato | Bitrate | Calidad |
 | :--- | :--- | :--- | :--- |
 | `/radio-dgutierrez.mp3` | MP3 | 128 kbps | ]Estándar |
