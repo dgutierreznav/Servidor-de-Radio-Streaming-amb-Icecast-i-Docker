@@ -79,10 +79,10 @@ radio-dgutierrez/
 
 **Gestión de contenido y metadatos**
    - **Playlist Rotativa**:
-      - Se utiliza un archivo `bucle.txt` y la función `concat` de FFmpeg para emitir una lista de canciones en bucle infinito
+      - Se utiliza un archivo `bucle.txt` y la función `concat` de FFmpeg para emitir una lista de canciones en bucle infinito.
         
    - **Metadatos Dinámicos**:
-     - Los streamers están configurados con el parámetro `-map-metadata 0` para enviar información de artista y título automáticamente al servidor
+     - Los streamers están configurados con el parámetro `-map-metadata 0` para enviar información de artista y título automáticamente al servidor.
 
 **Programación horaria (Automatización)**
    - Se utiliza un script de control (`radio_control.sh`) sincronizado con el sistema Crontab para gestionar las emisiones según la hora:
@@ -114,6 +114,6 @@ radio-dgutierrez/
 
 ## Notas y recomendaciones
 
-   - El ancho de banda de subida necesario se calcula multiplicando el bitrate del stream por el número de oyentes simultáneos
-   - Los fallos de conexión suelen deberse a errores en las contraseñas, puertos incorrectos o puntos de montaje duplicados
-   - La revisión de los archivos de registro es esencial para identificar errores de acceso y problemas de configuración en el servidor
+   - El ancho de banda de subida necesario se calcula multiplicando el bitrate del stream por el número de oyentes simultáneos.
+   - Los fallos de conexión suelen deberse a errores en las contraseñas, puertos incorrectos o puntos de montaje duplicados.
+   - La revisión de los archivos de registro es esencial para identificar errores de acceso y problemas de configuración en el servidor.
