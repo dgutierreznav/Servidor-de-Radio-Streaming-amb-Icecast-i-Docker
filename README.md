@@ -28,14 +28,14 @@ Este proyecto consiste en la implementación de un servidor de radio por streami
 - Estructura de directorios creada (`audio`, `config`, `logs`).
 
 ---
+
+```
 radio-dgutierrez/
 ├── /audio
 ├── /config
 ├── /logs
 ├── docker-compose.yml
 └── radio_control.sh
-```
-
 ```
 
 ---
