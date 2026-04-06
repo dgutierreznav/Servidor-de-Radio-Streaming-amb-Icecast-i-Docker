@@ -6,7 +6,7 @@ Este proyecto consiste en la implementación de un servidor de radio por streami
 
 ## Autor
 
-- [David Gutiérrez Navío](https://github.com/tu-usuario)
+- [David Gutiérrez](https://davidgutierrez.es/)
 
 ---
 
@@ -61,3 +61,11 @@ Este proyecto consiste en la implementación de un servidor de radio por streami
 | `/radio-dgutierrez.mp3` | MP3 | 128 kbps | ]Estándar |
 | `/radio-dgutierrez-hq.mp3` | MP3 | 320 kbps | [cite_start]Muy Alta |
 | `/radio-dgutierrez.opus` | Opus | 96 kbps | Excelente |
+
+---
+
+## Funcionalidades avanzadas
+
+**Gestión de contenido y metadatos
+   - Playlist Rotativa:
+     - Se utiliza un archivo bucle.txt y la función concat de FFmpeg para emitir una lista de canciones en bucle infinito.
