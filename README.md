@@ -110,6 +110,8 @@ radio-dgutierrez/
      ```bash
      http://localhost:8000/radio-nombre_radio.mp3
 
+---
+
 ## Notas y recomendaciones
 
    - El ancho de banda de subida necesario se calcula multiplicando el bitrate del stream por el número de oyentes simultáneos
