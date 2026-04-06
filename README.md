@@ -33,13 +33,28 @@ Este proyecto consiste en la implementación de un servidor de radio por streami
 
 1. **Preparar la estructura de directorios:**
 
-   - Crea las carpetas necesarias para organizar la configuración, los audios y los registros:
+   - Crea las carpetas necesarias para organizar la configuración, los audios y los registros
      
       ```bash
-      mkdir -p ~/radio-dgutierrez/{config,audio,logs}
+      mkdir -p ~/radio-nombre/{config,audio,logs}
 
-3. **Configurar las credenciales de acceso:**
+2. **Configurar las credenciales de acceso:**
    
    - Contraseña de Fuente (Source): ********
    - Contraseña de Administración: ********
    - Puerto de escucha: 8000
+
+3. **Iniciar el despliegue:**
+
+   - LEvanta el servidor y los streamers automáticamente con Docker Compose:
+
+      ```bash
+      docker-compose up -d
+
+---
+
+| Punto de Montaje | Formato | Bitrate | Calidad |
+| :--- | :--- | :--- | :--- |
+| `/radio-dgutierrez.mp3` | MP3 | 128 kbps | ]Estándar |
+| `/radio-dgutierrez-hq.mp3` | MP3 | 320 kbps | [cite_start]Muy Alta |
+| `/radio-dgutierrez.opus` | Opus | 96 kbps | Excelente |
