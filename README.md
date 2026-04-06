@@ -38,6 +38,6 @@ Este proyecto consiste en la implementación de un servidor de radio por streami
 
 2. **Configurar las credenciales de acceso:**
    
-   - Contraseña de Fuente (Source): ********
-   - Contraseña de Administración: ********
-   - Puerto de escucha: 8000
+- Contraseña de Fuente (Source): ********
+- Contraseña de Administración: ********
+- Puerto de escucha: 8000
