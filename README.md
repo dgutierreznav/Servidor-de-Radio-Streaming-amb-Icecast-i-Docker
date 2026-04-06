@@ -66,6 +66,6 @@ Este proyecto consiste en la implementación de un servidor de radio por streami
 
 ## Funcionalidades avanzadas
 
-**Gestión de contenido y metadatos
-   - Playlist Rotativa:
-     - Se utiliza un archivo bucle.txt y la función concat de FFmpeg para emitir una lista de canciones en bucle infinito.
+**Gestión de contenido y metadatos**
+   - **Playlist Rotativa**:
+     - Se utiliza un archivo `bucle.txt` y la función `concat` de FFmpeg para emitir una lista de canciones en bucle infinito.
