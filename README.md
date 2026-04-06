@@ -12,12 +12,12 @@ Este proyecto consiste en la implementación de un servidor de radio por streami
 
 ## Tecnologías utilizadas
 
-- **Icecast2**: Servidor de streaming multimedia.
-- **Docker & Docker Compose**: Despliegue y orquestación de servicios.
-- **FFmpeg**: Herramienta para la codificación y envío del flujo de audio.
-- **Bash Scripting**: Scripts de control para la programación horaria.
-- **Cron**: Automatización de tareas del sistema.
-- **XML**: Configuración personalizada del servidor.
+- **Icecast2**
+- **Docker & Docker Compose**
+- **FFmpeg**
+- **Bash Scripting**
+- **Cron**
+- **XML**
 
 ---
 
