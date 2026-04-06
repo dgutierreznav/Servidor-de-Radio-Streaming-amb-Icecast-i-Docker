@@ -75,6 +75,6 @@ Este proyecto consiste en la implementación de un servidor de radio por streami
 
 **Programación horaria (Automatización)**
    - Se utiliza un script de control (`radio_control.sh`) sincronizado con el sistema Crontab para gestionar las emisiones según la hora:
-      - **08:00:** Inicia el stream principal de la mañana
-      - **14:00:** Cambio a un flujo de diferente calidad (HQ u Opus) por la tarde
-      - **22:00:** Cierre de emisión y parada de servicios para la noche
+      - **08:00** → Inicia el stream principal de la mañana
+      - **14:00** → Cambio a un flujo de diferente calidad (HQ u Opus) por la tarde
+      - **22:00** → Cierre de emisión y parada de servicios para la noche
