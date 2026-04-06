@@ -58,8 +58,8 @@ Este proyecto consiste en la implementación de un servidor de radio por streami
      
 | Punto de Montaje | Formato | Bitrate | Calidad |
 | :--- | :--- | :--- | :--- |
-| `/radio-dgutierrez.mp3` | MP3 | 128 kbps | ]Estándar |
-| `/radio-dgutierrez-hq.mp3` | MP3 | 320 kbps | [cite_start]Muy Alta |
+| `/radio-dgutierrez.mp3` | MP3 | 128 kbps | Estándar |
+| `/radio-dgutierrez-hq.mp3` | MP3 | 320 kbps | Muy Alta |
 | `/radio-dgutierrez.opus` | Opus | 96 kbps | Excelente |
 
 ---
