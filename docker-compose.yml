@@ -1,0 +1,98 @@
+services:
+  # PERSONALITZA el nom del servei amb el teu nom
+  icecast-dgutierrez:
+    image: moul/icecast:latest
+    container_name: icecast-dgutierrez
+
+    ports:
+      - "8000:8000"
+
+    volumes:
+      - ./config/icecast.xml:/etc/icecast2/icecast.xml:ro
+      - ./logs:/var/log/icecast
+      - ./audio:/audio:ro
+
+    environment:
+      - TZ=Europe/Madrid
+
+    restart: unless-stopped
+
+    networks:
+      - radio-network
+
+  streamer-dgutierrez:
+    image: linuxserver/ffmpeg:latest
+    container_name: streamer-dgutierrez
+
+    volumes:
+      - ./audio:/audio:ro
+
+    command: >
+      -re -f concat -safe 0 -stream_loop -1
+      -i /audio/canco1.mp3
+      -map-metadata 0
+      -codec:a libmp3lame
+      -b:a 128k
+      -content_type audio/mpeg
+      -f mp3
+      icecast://source:Font_dgutierrez_2024@icecast-dgutierrez:8000/radio-dgutierrez.mp3
+
+    depends_on:
+      - icecast-dgutierrez
+
+    restart: unless-stopped
+
+    networks:
+      - radio-network
+
+  streamer-dgutierrez-hq:
+    image: linuxserver/ffmpeg:latest
+    container_name: streamer-dgutierrez-hq
+
+    volumes:
+      - ./audio:/audio:ro
+
+    command: >
+      -re -stream_loop -1
+      -i /audio/canco2.mp3
+      -codec:a libmp3lame
+      -b:a 320k
+      -content_type audio/mpeg
+      -f mp3
+      icecast://source:Font_dgutierrez_2024@icecast-dgutierrez:8000/radio-dgutierrez-hq.mp3
+
+    depends_on:
+      - icecast-dgutierrez
+
+    restart: unless-stopped
+
+    networks:
+      - radio-network
+
+  streamer-dgutierrez-opus:
+    image: linuxserver/ffmpeg:latest
+    container_name: streamer-dgutierrez-opus
+
+    volumes:
+      - ./audio:/audio:ro
+
+    command: >
+      -re -stream_loop -1
+      -i /audio/canco1.mp3
+      -codec:a libopus
+      -b:a 96k
+      -content_type audio/ogg
+      -f opus
+      icecast://source:Font_dgutierrez_2024@icecast-dgutierrez:8000/radio-dgutierrez.opus
+
+    depends_on:
+      - icecast-dgutierrez
+
+    restart: unless-stopped
+
+    networks:
+      - radio-network
+
+networks:
+  radio-network:
+    driver: bridge
